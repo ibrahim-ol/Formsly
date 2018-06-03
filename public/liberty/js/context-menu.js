@@ -1,7 +1,9 @@
 (function($) {
   'use strict';
   $.contextMenu({
-    selector: '#context-menu-simple',
+    selector: '.context-menu-simple',
+      trigger:'none',
+
     callback: function(key, options) {},
     items: {
       "edit": {

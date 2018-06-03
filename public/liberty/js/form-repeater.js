@@ -16,6 +16,7 @@
       // have $(this).show() called on it.
       show: function() {
         $(this).slideDown();
+        noteChange();
       },
       // (Optional)
       // "hide" is called when a user clicks on a data-repeater-delete

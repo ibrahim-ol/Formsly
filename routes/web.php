@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/create', function(){
-   return view('create_form');
+Route::get('create','HomeController@create');
+
+Route::post('create', 'HomeController@store');
+
+Route::get('archive', function(){
+    return view('archive');
 });

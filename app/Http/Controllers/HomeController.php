@@ -12,7 +12,7 @@ class HomeController extends Controller {
      * @return void
      */
     public function __construct() {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('index','create');
     }
 
     /**
@@ -22,6 +22,14 @@ class HomeController extends Controller {
      */
     public function index() {
         return view('home');
+    }
+
+    public function create(){
+        return view('create_form');
+    }
+
+    public function store(Request $request){
+
     }
 
 }
